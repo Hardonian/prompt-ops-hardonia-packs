@@ -1,0 +1,23 @@
+name: Validate
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate pack JSON
+        run: |
+          for f in packs/*.json; do
+            python3 -c "import json; json.load(open('$f'))" && echo "✓ $f" || echo "✗ $f"
+          done
+      - name: Check fulfillment script
+        run: python3 -c "import ast; ast.parse(open('scripts/fulfill.py').read())" && echo "✓ fulfill.py syntax OK"
