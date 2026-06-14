@@ -1,0 +1,32 @@
+{
+  "name": "Operator Workbook Pack",
+  "price": 129,
+  "description": "Verification, QA, and RPM checklists for operator-grade execution",
+  "prompts": [
+    {
+      "title": "Weekly Verification Checklist (RPM)",
+      "prompt": "Generate a Weekly Review & Planning Meeting (RPM) checklist for a {{ROLE}} at a {{COMPANY_STAGE}} company.\n\nSections:\n1. Metrics Review (5 mins) - Key numbers vs plan, variance explanation\n2. Pipeline Health (10 mins) - Deal stages, stale deals, next actions\n3. Product/Eng Health (10 mins) - Deploy frequency, bug ratio, tech debt\n4. People/Org (5 mins) - Hiring, performance, blockers\n5. Strategic Decisions (10 mins) - Decisions needed, owner, deadline\n6. Action Items - Owner, due date, success criteria\n\nOutput format: Markdown table with checkboxes. Include \"Last week's carryover\" section.",
+      "notes": "Run every Monday 9am. Time-box to 45 mins. Distribute notes in 15 mins. No status updates - only decisions and blockers."
+    },
+    {
+      "title": "Pre-Release Quality Gate",
+      "prompt": "Create a pre-release verification checklist for {{PRODUCT_TYPE}}.\n\nGates (all must pass):\n- [ ] TypeScript strict: zero errors\n- [ ] Lint: zero errors\n- [ ] Unit tests: >80% coverage, all pass\n- [ ] E2E smoke: critical path verified\n- [ ] Build: production build succeeds\n- [ ] Bundle size: within budget\n- [ ] Security: no new vulnerabilities (npm audit)\n- [ ] Env parity: staging matches prod config\n- [ ] Rollback: tested in last 30 days\n- [ ] Changelog: user-facing changes documented\n\nAdd product-specific gates for {{PRODUCT_TYPE}}.",
+      "notes": "Enforced in CI. No merge to main without green. No deploy without manual approval on gate failure."
+    },
+    {
+      "title": "Incident Retrospective Template",
+      "prompt": "Produce a blameless incident retrospective for {{INCIDENT_TYPE}}.\n\nSections:\n1. Timeline (UTC) - Detection, acknowledgment, mitigation, resolution\n2. Impact - Users affected, revenue at risk, SLA breach\n3. Root Cause - 5 Whys, contributing factors\n4. What Went Well - Detection, communication, mitigation\n5. What Didn't - Gaps in monitoring, runbooks, escalation\n6. Action Items - [ ] Ticket, owner, due date, verification\n\nFormat: One-pager. No \"human error\" as root cause. Every action item = ticket in Linear/Jira.",
+      "notes": "Publish within 48h. Review in next RPM. Close action items in 2 weeks or escalate."
+    },
+    {
+      "title": "Vendor / Tool Evaluation Scorecard",
+      "prompt": "Create an evaluation scorecard for {{CATEGORY}} tool/vendor selection.\n\nCriteria (weighted):\n- Core capability fit (30%) - Does it solve the job-to-be-done?\n- Integration effort (20%) - API, webhooks, SSO, data migration\n- Reliability/SLA (15%) - Uptime, support tier, incident history\n- Cost model (15%) - Predictable, usage-based, seats\n- Security/Compliance (10%) - SOC2, data residency, DPA\n- Vendor viability (10%) - Funding, team, roadmap alignment\n\nScoring: 1-5 per criterion. Weighted total. Threshold: >3.5 to shortlist.\n\nOutput: Comparison table + recommendation + negotiation levers.",
+      "notes": "Run eval in 1 week max. Two people max. Demo on your data, not theirs. Reference calls required before contract."
+    },
+    {
+      "title": "Hiring Loop - Operator Scorecard",
+      "prompt": "Generate an interview scorecard for {{ROLE}} (fractional COO / RevOps / GTM operator).\n\nDimensions (score 1-5 + evidence):\n1. Operator DNA - Bias to action, owns outcomes, not tasks\n2. Systems thinking - Builds repeatable, not heroic\n3. Revenue fluency - Speaks pipeline, CAC, LTV, not vanity\n4. Stakeholder mgmt - Influences without authority\n5. Grit - Evidence of shipping through ambiguity\n6. Tool competence - Can operate the stack (CRM, BI, SQL)\n\nInterview flow: 30-min screen → 60-min case study (real problem) → 30-min values/refs\n\nPass threshold: 4.0 avg, no dimension <3. References: 2 former founders/CEOs.",
+      "notes": "Case study = actual current problem. Pay for 2h of their time. No take-home projects."
+    }
+  ]
+}

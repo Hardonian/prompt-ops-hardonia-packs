@@ -1,0 +1,32 @@
+{
+  "name": "GTM Starter Pack",
+  "price": 199,
+  "description": "Combined outreach + review templates for founder-led GTM",
+  "prompts": [
+    {
+      "title": "Founder-Led Sales: First 20 Conversations",
+      "prompt": "Create a founder sales playbook for first 20 discovery calls for {{PRODUCT}} at {{PRICE_POINT}}.\n\nStructure per call:\n1. Pre-call (5 mins) - LinkedIn, site, tech stack, trigger event\n2. Opening (3 mins) - Context, agenda, permission to ask hard questions\n3. Discovery (25 mins) - Situation, Pain, Impact, Critical Event, Decision (SPICED)\n4. Demo/Walkthrough (10 mins) - Only what maps to their pain\n5. Next Steps (5 mins) - Clear owner, date, deliverable\n\nIncludes:\n- 10 discovery questions (ranked by signal)\n- 5 disqualification criteria (walk away early)\n- Pricing conversation script (anchor high, justify)\n- Follow-up email template (sent within 1h)\n- CRM fields to capture (deal stage, MEDDIC, next action)",
+      "notes": "Founder does first 20. No sales hire until 3 closes at target price. Record every call (Fathom/Grain). Review weekly."
+    },
+    {
+      "title": "ICP Refinement + Account List Builder",
+      "prompt": "Build a systematic ICP refinement + account list process for {{PRODUCT}}.\n\nPhase 1: Define ICP attributes (firmographic + technographic + behavioral)\n- Company size, revenue, geo\n- Tech stack signals (e.g., uses Stripe, Segment, Snowflake)\n- Behavioral triggers (hiring X role, raised funding, launched product)\n\nPhase 2: Score & prioritize (1-5 each)\n- Pain severity\n- Budget authority\n- Urgency\n- Accessibility\n\nPhase 3: Build list of 100 accounts\n- Apollo/Clay/LinkedIn Sales Nav\n- Enrich: decision maker, email, trigger\n- Tag: Tier 1 (20), Tier 2 (30), Tier 3 (50)\n\nPhase 4: Weekly motion\n- 20 new Tier 1/Tier 2 contacts/week\n- 5 referrals/week from network\n- Track: reply rate, meeting rate, SQL rate\n\nOutput: Notion/Airtable template + weekly dashboard.",
+      "notes": "ICP = hypothesis. Refine weekly based on who replies and closes. Kill Tier 3 if Tier 1 conversion >20%."
+    },
+    {
+      "title": "Pricing Page + Packaging Generator",
+      "prompt": "Generate a pricing page structure and packaging logic for {{PRODUCT_TYPE}}.\n\nFramework:\n1. Anchor: Enterprise/High tier first (price, value)\n2. Middle: Growth/Pro (target 60% of buyers)\n3. Entry: Starter/Free (qualifier, not revenue driver)\n\nEach tier:\n- Headline outcome (not feature list)\n- 3-5 value bullets\n- One \"best for\" line\n- Price (monthly + annual)\n- CTA: \"Start trial\" / \"Talk to sales\"\n\nPackaging levers:\n- Seats vs usage vs outcomes\n- Feature gates (SSO, API, SLA, support)\n- Implementation included?\n\nOutput: HTML/CSS-ready copy + Stripe price ID mapping table.",
+      "notes": "Test with 5 buyers before launch. \"Would you pay $X for this outcome?\" not \"Do you like this pricing?\""
+    },
+    {
+      "title": "Weekly GTM Review Dashboard",
+      "prompt": "Create a weekly GTM review dashboard template for founder/operator.\n\nMetrics (update every Monday):\n- Top of funnel: New contacts, reply rate, meeting booked\n- Pipeline: SQLs, opps created, weighted pipeline\n- Conversion: SQL→Opp, Opp→Close, cycle time\n- Revenue: New ARR, expansion, churn, net new\n- Efficiency: CAC, LTV:CAC, payback period\n- Activity: Calls, emails, demos, proposals sent\n\nFormat:\n- Rolling 4-week trend\n- Red/amber/green vs target\n- One-sentence narrative per section\n- 3 decisions needed this week\n\nTools: Notion + Supabase/Postgres + Grafana or Notion charts.",
+      "notes": "Review Monday 9am. 30 mins max. Decisions > metrics. If no decision from a metric, stop tracking it."
+    },
+    {
+      "title": "Starter Outreach + Operator Workbook (Full Content)",
+      "prompt": "This pack includes ALL prompts from Starter Outreach Pack ($79) AND Operator Workbook Pack ($129) at a bundle discount.\n\nSee individual pack files for full prompt content.\n\nBonus: GTM-specific integrations:\n- Outreach sequences mapped to RPM checklist gates\n- Objection handling → Incident retrospective patterns\n- Referral requests → Hiring loop for first sales hire\n- ICP refinement → Vendor evaluation for sales tools",
+      "notes": "Best value for solo founders doing everything. Use Outreach for top-of-funnel, Workbook for execution discipline."
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Starter Outreach Pack",
+  "price": 79,
+  "description": "Sequences, discovery emails, objection replies for cold outbound",
+  "prompts": [
+    {
+      "title": "Cold Email Sequence - 5 Touch",
+      "prompt": "Write a 5-email cold outreach sequence for {{ICP}} selling {{PRODUCT}}.\n\nConstraints:\n- Email 1: Problem-agitate-solution, <120 words, one clear CTA (reply)\n- Email 2: Social proof + one specific metric, <100 words\n- Email 3: Different angle (risk/cost of inaction), <100 words\n- Email 4: Break-up email, <60 words, permission to close file\n- Email 5: Pattern interrupt (loom/video/asset), <80 words\n\nTone: Direct, no fluff, no \"I hope this finds you well.\" No exclamation marks.\nICP details: {{ICP_DETAILS}}\nProduct: {{PRODUCT_DESCRIPTION}}\nKey metric: {{KEY_METRIC}}",
+      "notes": "Replace {{}} variables per campaign. Test subject lines separately. Send Tue-Thu 10am-2pm recipient time."
+    },
+    {
+      "title": "LinkedIn Connection + DM Sequence",
+      "prompt": "Write a LinkedIn connection request (300 char limit) + 3 follow-up DMs for {{ICP}}.\n\nConnection: No pitch. Context + relevance only.\nDM 1 (day 2): One insight about their space + soft ask\nDM 2 (day 5): Case study snippet (1 sentence) + \"worth a chat?\"\nDM 3 (day 10): Break-up - \"I'll stop here, let me know if priorities shift\"\n\nICP: {{ICP_DETAILS}}\nYour credibility: {{YOUR_PROOF}}",
+      "notes": "Only connect with 2nd-degree or group-shared. Personalize connection note with specific trigger."
+    },
+    {
+      "title": "Objection Handling Library",
+      "prompt": "Generate direct replies for the top 5 objections for {{PRODUCT}} selling to {{ICP}}:\n\n1. \"We're already using [competitor]\"\n2. \"Not a priority right now\"\n3. \"Budget's locked for this quarter\"\n4. \"Send me info / I'll review\"\n5. \"We build this internally\"\n\nFormat per objection:\n- Acknowledge (1 sentence)\n- Pivot (reframe)\n- Proof point (1 metric or logo)\n- Low-friction CTA (reply / 10-min call / loom)\n\nProduct: {{PRODUCT_DESCRIPTION}}\nDifferentiator: {{KEY_DIFFERENTIATOR}}",
+      "notes": "Keep each reply <80 words. No \"I understand\" filler. Price objection = not in top 5 for this ICP."
+    },
+    {
+      "title": "Referral / Warm Intro Request",
+      "prompt": "Write a referral request email to {{CONNECTION_NAME}} asking for intro to {{TARGET_NAME}} at {{TARGET_COMPANY}}.\n\nStructure:\n- Context: Why this specific person (1 sentence)\n- Value: What target gets from the call (1 outcome)\n- Easy out: \"No pressure if not a fit\"\n- Forwardable blurb: 3 lines they can paste\n\nYour relationship: {{RELATIONSHIP_CONTEXT}}\nTarget's likely pain: {{TARGET_PAIN}}",
+      "notes": "Send to connectors who owe you social capital, not random contacts."
+    }
+  ]
+}
