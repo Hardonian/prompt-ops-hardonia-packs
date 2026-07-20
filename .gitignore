@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+venv/
+.venv/
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+
+# Build / dist
+dist/
+build/
+*.egg-info/
+target/
+bin/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+
+# Local data / secrets
+*.db
+*.sqlite
+*.sqlite3
+secrets/
+*.pem
+*.key
