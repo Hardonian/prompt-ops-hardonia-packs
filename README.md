@@ -1,5 +1,9 @@
 # Prompt Ops — Hardonia Operator Packs
 
+<!-- BEGIN: REPO HERO -->
+![prompt-ops-hardonia-packs — hero generated locally on the GPU stack](assets/repo-hero.png)
+<!-- END: REPO HERO -->
+
 Compact prompt packs for revenue ops, outreach, GTM, and verification workflows.
 
 ## Ownership
